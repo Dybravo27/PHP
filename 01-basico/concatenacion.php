@@ -2,7 +2,7 @@
 $nombre = "Dylan";
 $apellido = "Bravo";
 $pais = "Colombia";
-
+// concatenar
 echo $nombre, ' ',$apellido, ' y su pais de origen es ', $pais, "<br>";
 echo "<hr>";
 // para interpolar se necesitan solo comillas dobles
