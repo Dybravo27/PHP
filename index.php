@@ -29,3 +29,5 @@
 <a href="01-basico/condicionales_anidados.php">Condicionales Anidados</a>
 <br>
 <a href="01-basico/condicional_switch_case.php">Condicionales Switch</a>
+<br>
+<a href="01-basico/bucle_while.php">Bucle while</a>
