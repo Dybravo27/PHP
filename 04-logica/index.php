@@ -20,4 +20,7 @@
   <li>
     <a href="contar_silabas.php">Contador de silabas</a>
   </li>
+  <li>
+    <a href="funciones_string.php">funciones string</a>
+  </li>
 </ul>
