@@ -10,37 +10,45 @@ form{
     justify-content: center;
     align-items: center;
     height: 100%;
-    background-color: #27374D;
+    background-color: #272829;
 }
 form fieldset{
     width: 30%;
     border-radius: 6%;
-    border: 3px solid #DDE6ED;
+    border: 3px solid #FFF6E0;
     font-weight: 700;
-    box-shadow: 0 5px 10px #fff,
-    0 6px 11px #fff,
-    0 7px 12px #fff;
+    box-shadow: 0 5px 10px #272829,
+    0 6px 11px #272829,
+    0 7px 12px #FFF6E0,
+    0 8px 13px #FFF6E0;
 }
 legend{
     text-align: center;
     margin-bottom: 1vw;
     font-size: 1.5rem;
-    color: #DDE6ED;
-    text-shadow: 0 0 5px #DDE6ED;
+    color: #FFF6E0;
+    font-weight: 800;
 }
 button{
     border: none; 
-    color: #fff; 
+    color: #FFF6E0; 
     padding: 0.6vw 1vw; 
     cursor: pointer; 
-    border-radius: 5px; 
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
     display: inline-block;
     margin: 5px;
-    background: linear-gradient(to right, #007bff, #4ab2e2);;
+    background: linear-gradient(to right, #FFF6E0, #272829);
+    box-shadow: 0 0px 10px #272829,
+    0 0px 11px #FFF6E0,
+    0 0px 12px #FFF6E0,
+    0 0Px 12px #FFF6E0;
 }
 h3{
-    color: #DDE6ED;
-    text-shadow: 0 0 5px #DDE6ED;
+    color: #FFF6E0;
+    font-weight: 900;
+    padding-bottom: 1vw;
 }
 button, div{
     padding-left: 5%;
@@ -51,6 +59,7 @@ fieldset button{
     margin-left: 5%;
 }
 fieldset div label{
-    color: #DDE6ED;
+    color: #FFF6E0;
+    font-weight: 300;
     font-size: 1.2rem;
 }
