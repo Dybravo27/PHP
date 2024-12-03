@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="style/style.css">
 <?php
 require('conexion.php');
 
@@ -14,38 +15,39 @@ $usuarios = $bandera_usuarios->fetchAll();
 
 
 ?>
-<table border="3">
-    <caption>USUARIOS</caption>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>NOMBRE</th>
-            <th>APELLIDO</th>
-            <th>CORREO</th>
-            <th>FECHA NACIMIENTO</th>
-            <th>CIUDAD</th>
-            <th>GENERO</th>
-            <th>MODIFICAR</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php
-        foreach ($usuarios as $key => $value) {
-        ?>
-        <tr>
-            <td><?=$value['id_usuario']?></td>
-            <td><?=$value['nombre']?></td>
-            <td><?=$value['apellido']?></td>
-            <td><?=$value['correo']?></td>
-            <td><?=$value['fecha_nacimiento']?></td>
-            <td><?=$value['genero']?></td>
-            <td><?=$value['nombre_ciudad']?></td>
-            <td>
-                <a href="editar.php? id=<?=$value['id_usuario']?>">Editar</a>
-                <a href="eliminar.php? id=<?=$value['id_usuario']?>">Eliminar</a>
-            </td>            
-        </tr>
-        <?php }?>
-        
-    </tbody>
-</table>
+<div class="tabla__contenedor">
+    <table class="tabla">
+        <caption class="tabla__titulo">USUARIOS</caption>
+        <thead class="tabla__cabecera">
+            <tr class="tabla__fila">
+                <th class="tabla__celda">ID</th>
+                <th class="tabla__celda">NOMBRE</th>
+                <th class="tabla__celda">APELLIDO</th>
+                <th class="tabla__celda">CORREO</th>
+                <th class="tabla__celda">FECHA NACIMIENTO</th>
+                <th class="tabla__celda">CIUDAD</th>
+                <th class="tabla__celda">GENERO</th>
+                <th class="tabla__celda">MODIFICAR</th>
+            </tr>
+        </thead>
+        <tbody class="tabla__cuerpo">
+            <?php
+            foreach ($usuarios as $key => $value) {
+            ?>
+            <tr class="tabla__fila">
+                <td class="tabla__celda"><?=$value['id_usuario']?></td>
+                <td class="tabla__celda"><?=$value['nombre']?></td>
+                <td class="tabla__celda"><?=$value['apellido']?></td>
+                <td class="tabla__celda"><?=$value['correo']?></td>
+                <td class="tabla__celda"><?=$value['fecha_nacimiento']?></td>
+                <td class="tabla__celda"><?=$value['nombre_ciudad']?></td>
+                <td class="tabla__celda"><?=$value['genero']?></td>
+                <td class="tabla__celda">
+                    <a class="tabla__enlace" href="editar.php? id=<?=$value['id_usuario']?>">Editar</a>
+                    <a class="tabla__enlace" href="eliminar.php? id=<?=$value['id_usuario']?>">Eliminar</a>
+                </td>            
+            </tr>
+            <?php }?>
+        </tbody>
+    </table>
+</div>

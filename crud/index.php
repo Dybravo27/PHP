@@ -33,73 +33,81 @@ $lenguajes = $bandera_lenguajes->fetchAll();
 // echo "</pre>";
 
 ?>
-<form action="controlador.php" method="post">
-    <fieldset>
-        <legend>Conexion PHP a MySQL</legend>
-        <div>
-            <label for="nombre">Nombres</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre">
-        </div>
-        <div>
-            <label for="apellido">Apellido</label>
-            <input type="text" id="apellido" name="apellido" placeholder="Apellido">
-        </div>
-        <div>
-            <label for="correo">Correo</label>
-            <input type="text" id="correo" name="correo" placeholder="Correo">
-        </div>
-        <div>
-            <label for="fecha_nacimiento">Fecha Nacimiento</label>
-            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" placeholder="Fecha">
-        </div>
-
-        <div>
-            <label for="id_ciudad">Ciudades</label>
-            <select name="id_ciudad" id="id_ciudad">
+<div class="contenedor_formulario">
+    <form class="formulario" action="controlador.php" method="post">
+        <fieldset class="formulario__borde">
+            <legend class="formulario__contenedor-titulo">
+                <h2 class="formulario__titulo">FORMULARIO CRUD</h2>
+            </legend>
+            <div class="formulario_input_label">
+                <label class="formulario_input_label__label" for="nombre">Nombres</label>
+                <input class="formulario_input_label__input" type="text" id="nombre" name="nombre" placeholder="Nombre">
+            </div>
+            <div class="formulario_input_label">
+                <label class="formulario_input_label__label" for="apellido">Apellidos</label>
+                <input class="formulario_input_label__input" type="text" id="apellido" name="apellido" placeholder="Apellido">
+            </div>
+            <div class="formulario_input_label">
+                <label class="formulario_input_label__label" for="correo">Correo</label>
+                <input class="formulario_input_label__input" type="text" id="correo" name="correo" placeholder="Correo">
+            </div>
+            <div class="formulario_input_label">
+                <label class="formulario_input_label__label" for="fecha_nacimiento">Fecha Nacimiento</label>
+                <input class="formulario_input_label__input" type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+            </div>
+    
+            <div class="formulario_input_label">
+                <label class="formulario_input_label__label" for="id_ciudad">Ciudades</label>
+                <select class="formulario_input_label__input" name="id_ciudad" id="id_ciudad">
+                    <?php
+                    foreach ($ciudades as $key => $value) {
+                    ?>
+                    <option id="<?=$value['id_ciudad']?>" value="<?= $value['id_ciudad'] ?>">
+                        <?= $value['nombre_ciudad'] ?>
+                    </option>
+                    <?php
+                    }
+                    ?>
+                </select>
+            </div>
+    
+            <div class="formulario_input_label">
+                <h3 class="formulario_input_label__titulo">Seleccione su genero:</h3>
                 <?php
-                foreach ($ciudades as $key => $value) {
+                 foreach ($generos as $key => $value){
                 ?>
-                <option id="<?=$value['id_ciudad']?>" value="<?= $value['id_ciudad'] ?>">
-                    <?= $value['nombre_ciudad'] ?>
-                </option>
+                    <div>
+                        <label class="formulario_input_label__label"
+                         for="generos<?=$value['id_genero']?>"><?= $value['genero'] ?>
+                            <input type="radio" name="id_genero" value="<?=$value['id_genero']?>" 
+                            id="generos<?=$value['id_genero']?>">
+                        </label>
+                    </div>
                 <?php
                 }
                 ?>
-            </select>
-        </div>
-
-        <div>
-            <h3>Genero</h3>
-            <?php
-             foreach ($generos as $key => $value){
-            ?>
-                <div>
-                    <label for="generos<?=$value['id_genero']?>"><?= $value['genero'] ?>
-                        <input type="radio" name="id_genero" value="<?=$value['id_genero']?>" 
-                        id="generos<?=$value['id_genero']?>">
-                    </label>
-                </div>
-            <?php
-            }
-            ?>
-        </div>
-
-        <div>
-            <h3>Lenguajes</h3>
-            <?php
-             foreach ($lenguajes as $key => $value){
-            ?>
-                <div>
-                    <label for="lenguajes<?=$value['id_lenguaje']?>"><?= $value['nombre_lenguaje'] ?>
-                        <input type="checkbox" name="id_lenguaje[] " value="<?=$value['id_lenguaje']?>" 
-                        id="<?=$value['id_lenguaje']?>">
-                    </label>
-                </div>
-            <?php
-            }
-            ?>
-        </div>
-        <button type="submit">Guardar Datos</button>
-    </fieldset>
-</form>
+            </div>
+    
+            <div class="formulario_input_label">
+                <h3 class="formulario_input_label__titulo">Lenguajes en los que se especializa:</h3>
+                <?php
+                 foreach ($lenguajes as $key => $value){
+                ?>
+                    <div>
+                        <label class="formulario_input_label__label"
+                         for="lenguajes<?=$value['id_lenguaje']?>"><?= $value['nombre_lenguaje'] ?>
+                            <input type="checkbox" name="id_lenguaje[] " value="<?=$value['id_lenguaje']?>" 
+                            id="<?=$value['id_lenguaje']?>">
+                        </label>
+                    </div>
+                <?php
+                }
+                ?>
+            </div>
+            <div class="formulario__container-boton">
+                <button class="formulario__boton" type="submit">Guardar Datos</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
 

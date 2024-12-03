@@ -1,65 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url(formulario_esti.css);
+@import url(tabla_usuario.css);
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "DM Sans", sans-serif;
 }
-form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+
+body{
     background-color: #272829;
 }
-form fieldset{
-    width: 30%;
-    border-radius: 6%;
-    border: 3px solid #FFF6E0;
-    font-weight: 700;
-    box-shadow: 0 5px 10px #272829,
-    0 6px 11px #272829,
-    0 7px 12px #FFF6E0,
-    0 8px 13px #FFF6E0;
+::-webkit-scrollbar {
+    width: 12px;
 }
-legend{
-    text-align: center;
-    margin-bottom: 1vw;
-    font-size: 1.5rem;
-    color: #FFF6E0;
-    font-weight: 800;
+::-webkit-scrollbar-track {
+    background: #272829;
+    border-radius: 10px;
 }
-button{
-    border: none; 
-    color: #FFF6E0; 
-    padding: 0.6vw 1vw; 
-    cursor: pointer; 
-    border-radius: 5px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    display: inline-block;
-    margin: 5px;
-    background: linear-gradient(to right, #FFF6E0, #272829);
-    box-shadow: 0 0px 10px #272829,
-    0 0px 11px #FFF6E0,
-    0 0px 12px #FFF6E0,
-    0 0Px 12px #FFF6E0;
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #FFF6E0, #272829);
+    border-radius: 10px;
+    border: 2px solid #FFF6E0;
 }
-h3{
-    color: #FFF6E0;
-    font-weight: 900;
-    padding-bottom: 1vw;
+::-webkit-scrollbar-horizontal {
+    height: 12px;
 }
-button, div{
-    padding-left: 5%;
-    margin-bottom: 0.7vw;
-}
-fieldset button{
-    padding-left: 1vw;
-    margin-left: 5%;
-}
-fieldset div label{
-    color: #FFF6E0;
-    font-weight: 300;
-    font-size: 1.2rem;
+::-webkit-scrollbar-thumb:horizontal {
+    background: linear-gradient(45deg, #FFF6E0, #272829);
+    border-radius: 10px;
+    border: 2px solid #FFF6E0;
 }

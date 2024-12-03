@@ -1,0 +1,92 @@
+.contenedor_formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border: 2px solid #FFF6E0;
+    border-radius: 8px;
+    padding: 1vw 2vw;
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 12px rgba(255, 246, 224, 0.5);
+}
+.formulario__borde{
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid #FFF6E0;
+    font-weight: 700;
+    box-shadow: 0 5px 10px #272829,
+    0 6px 11px #272829,
+    0 7px 12px #FFF6E0,
+    0 8px 13px #FFF6E0;
+}
+.formulario__contenedor-titulo{
+
+    text-align: center;
+    font-size: 1.2rem;
+    color: #FFF6E0;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+.formulario__titulo{
+    padding: 8px;
+    font-size: 1.8rem;
+    border: 4px solid #FFF6E0;
+    border-radius: 8px;
+    color: #FFF6E0;
+}
+.formulario_input_label__titulo{
+    color: #FFF6E0;
+    font-weight: 700;
+}
+.formulario_input_label{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 5%;
+    gap: 5px;
+    margin-bottom: 1rem;
+}
+
+.formulario_input_label__label{
+    color: #FFF6E0;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+.formulario_input_label__input{
+    padding: 5px;
+    border: 3px solid #FFF6E0;
+    background-color: #272829;
+    color: #FFF6E0;
+    border-radius: 10px;
+    outline: none;
+}
+.formulario__container-boton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+.formulario__boton{
+    border: none; 
+    color: #FFF6E0; 
+    padding: 0.6vw 1vw; 
+    cursor: pointer; 
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-block;
+    margin: 5px;
+    background: linear-gradient(to right, #FFF6E0, #272829);
+    box-shadow: 0 0px 10px #272829,
+    0 0px 11px #FFF6E0,
+    0 0px 12px #FFF6E0,
+    0 0Px 12px #FFF6E0;
+}
