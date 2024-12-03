@@ -1,9 +1,6 @@
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style/style.css">
 <?php
-
-
 require('conexion.php');
-
 $db ="";
 $conexion ="";
 
