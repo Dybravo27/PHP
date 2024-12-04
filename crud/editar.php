@@ -5,7 +5,7 @@ require('conexion.php');
 $db = new Conexion();
 $conexion = $db->getConexion();
 
-$id_usuario = $_GET['id'];
+$id_usuario = $_REQUEST['id'];
 
 $sql_editar = 'SELECT * FROM usuarios WHERE id_usuario = :id_usuario';
 $stm = $conexion->prepare($sql_editar);
@@ -40,11 +40,9 @@ $leng_usu = $stm->fetchAll();
             <legend class="formulario__contenedor-titulo">
                 <h2 class="formulario__titulo">EDITAR DATOS</h2>
             </legend>
-            <!-- <div class="formulario_input_label">
-                <input type="hidden" name="id" value=<?$id_usuario?>>
-            </div> -->
             <div class="formulario_input_label">
                 <label class="formulario_input_label__label" for="nombre">Nombres</label>
+                <input type="hidden" name="id_usuario" value="<?=$id_usuario?>">
                 <input class="formulario_input_label__input"s type="text" id="nombre" name="nombre" placeholder="Nombre" required value="<?=$usuario['nombre']?>">
             </div>
             <div class="formulario_input_label">

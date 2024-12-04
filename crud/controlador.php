@@ -1,7 +1,6 @@
 <?php
 require('conexion.php');
 
-// die();
 $db = new Conexion();
 $conexion = $db->getConexion();
 // recibimos los valores del formulario
@@ -12,10 +11,6 @@ $fecha_nacimiento = $_POST['fecha_nacimiento'];
 $id_ciudad = $_POST['id_ciudad'];
 $id_genero = $_POST['id_genero'];
 $id_lenguaje = $_POST['id_lenguaje'];
-
-// echo "<pre>";
-// print_r($id_lenguaje);
-// echo "</pre>";
 
 $sql = "INSERT INTO usuarios (nombre,apellido,correo,fecha_nacimiento,id_ciudad,id_genero) VALUES
 (:nombre,:apellido,:correo,:fecha_nacimiento,:id_ciudad,:id_genero)";

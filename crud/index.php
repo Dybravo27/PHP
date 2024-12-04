@@ -23,15 +23,6 @@ $bandera_lenguajes = $conexion->prepare($sql_lenguajes);
 $bandera_lenguajes->execute();
 $lenguajes = $bandera_lenguajes->fetchAll();
 
-// echo "<pre>";
-// print_r($ciudades);
-// echo "</pre>";
-
-
-// echo "<pre>";
-// print_r($generos);
-// echo "</pre>";
-
 ?>
 <div class="contenedor_formulario">
     <form class="formulario" action="controlador.php" method="post">
@@ -41,19 +32,19 @@ $lenguajes = $bandera_lenguajes->fetchAll();
             </legend>
             <div class="formulario_input_label">
                 <label class="formulario_input_label__label" for="nombre">Nombres</label>
-                <input class="formulario_input_label__input" type="text" id="nombre" name="nombre" placeholder="Nombre">
+                <input class="formulario_input_label__input" type="text" id="nombre" name="nombre" placeholder="Nombre" required autocomplete="off">
             </div>
             <div class="formulario_input_label">
                 <label class="formulario_input_label__label" for="apellido">Apellidos</label>
-                <input class="formulario_input_label__input" type="text" id="apellido" name="apellido" placeholder="Apellido">
+                <input class="formulario_input_label__input" type="text" id="apellido" name="apellido" placeholder="Apellido" required autocomplete="off">
             </div>
             <div class="formulario_input_label">
                 <label class="formulario_input_label__label" for="correo">Correo</label>
-                <input class="formulario_input_label__input" type="text" id="correo" name="correo" placeholder="Correo">
+                <input class="formulario_input_label__input" type="text" id="correo" name="correo" placeholder="Correo" required autocomplete="off">
             </div>
             <div class="formulario_input_label">
                 <label class="formulario_input_label__label" for="fecha_nacimiento">Fecha Nacimiento</label>
-                <input class="formulario_input_label__input" type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+                <input class="formulario_input_label__input" type="date" id="fecha_nacimiento" name="fecha_nacimiento" required autocomplete="off">
             </div>
     
             <div class="formulario_input_label">

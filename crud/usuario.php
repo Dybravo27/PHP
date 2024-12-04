@@ -15,6 +15,11 @@ $usuarios = $bandera_usuarios->fetchAll();
 
 
 ?>
+<form action="index.php" method="post">
+    <div class="formulario__container-boton">
+        <button class="formulario__boton" type="submit" >Volver a formulario</button>
+    </div>
+</form>
 <div class="tabla__contenedor">
     <table class="tabla">
         <caption class="tabla__titulo">USUARIOS</caption>
