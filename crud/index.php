@@ -32,24 +32,28 @@ $lenguajes = $bandera_lenguajes->fetchAll();
             </legend>
             <div class="formulario_input_label">
                 <label class="formulario_input_label__label" for="nombre">Nombres</label>
-                <input class="formulario_input_label__input" type="text" id="nombre" name="nombre" placeholder="Nombre" required autocomplete="off">
+                <input class="formulario_input_label__input" type="text" id="nombre" name="nombre" placeholder="Nombre" required pattern="^[A-Za-z\s]+$" 
+                autocomplete="off">
             </div>
             <div class="formulario_input_label">
                 <label class="formulario_input_label__label" for="apellido">Apellidos</label>
-                <input class="formulario_input_label__input" type="text" id="apellido" name="apellido" placeholder="Apellido" required autocomplete="off">
+                <input class="formulario_input_label__input" type="text" id="apellido" name="apellido" placeholder="Apellido" required pattern="^[A-Za-z\s]+$"
+                autocomplete="off">
             </div>
             <div class="formulario_input_label">
                 <label class="formulario_input_label__label" for="correo">Correo</label>
-                <input class="formulario_input_label__input" type="text" id="correo" name="correo" placeholder="Correo" required autocomplete="off">
+                <input class="formulario_input_label__input" type="text" id="correo" name="correo" placeholder="Correo" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                autocomplete="off">
             </div>
             <div class="formulario_input_label">
                 <label class="formulario_input_label__label" for="fecha_nacimiento">Fecha Nacimiento</label>
-                <input class="formulario_input_label__input" type="date" id="fecha_nacimiento" name="fecha_nacimiento" required autocomplete="off">
+                <input class="formulario_input_label__input" type="date" id="fecha_nacimiento" name="fecha_nacimiento" required pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\d{4}" 
+                autocomplete="off">
             </div>
     
             <div class="formulario_input_label">
                 <label class="formulario_input_label__label" for="id_ciudad">Ciudades</label>
-                <select class="formulario_input_label__input" name="id_ciudad" id="id_ciudad">
+                <select class="formulario_input_label__input" name="id_ciudad" id="id_ciudad" required>
                     <?php
                     foreach ($ciudades as $key => $value) {
                     ?>
@@ -71,7 +75,7 @@ $lenguajes = $bandera_lenguajes->fetchAll();
                         <label class="formulario_input_label__label"
                          for="generos<?=$value['id_genero']?>"><?= $value['genero'] ?>
                             <input type="radio" name="id_genero" value="<?=$value['id_genero']?>" 
-                            id="generos<?=$value['id_genero']?>">
+                            id="generos<?=$value['id_genero']?>" required>
                         </label>
                     </div>
                 <?php
@@ -101,4 +105,3 @@ $lenguajes = $bandera_lenguajes->fetchAll();
         </fieldset>
     </form>
 </div>
-
