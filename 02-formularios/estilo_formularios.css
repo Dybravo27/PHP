@@ -1,0 +1,69 @@
+@import url(../estilo_lista_apuntes.css);
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #e5e5f7;
+    opacity: 0.9;
+    background-image: radial-gradient(circle at center center, #272829, #e5e5f7), repeating-radial-gradient(circle at center center, #272829, #272829, 14px, transparent 28px, transparent 14px);
+    background-blend-mode: multiply;
+}
+
+.formulario__contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.formulario__campo {
+    width: 100%;
+}
+
+.formulario__label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.formulario__input,
+.formulario__checkbox {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulario__checkbox {
+    width: auto;
+}
+
+.formulario__boton {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #FFF6E0;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.formulario__boton:hover {
+    background-color: #FFF6E0;
+    color: #272829;
+    transform: scale(1.1);
+}

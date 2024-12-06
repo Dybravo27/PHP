@@ -1,0 +1,86 @@
+@import url(../estilo_lista_apuntes.css);
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #e5e5f7;
+    opacity: 0.9;
+    background-image: radial-gradient(circle at center center, #272829, #e5e5f7), repeating-radial-gradient(circle at center center, #272829, #272829, 14px, transparent 28px, transparent 14px);
+    background-blend-mode: multiply;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    font-size: 5rem;
+    color: #FFF6E0;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-shadow:
+        0 3px 0 #272829,
+        0 6px 0 #272829,
+        0 9px 0 #333,
+        0 12px 0 #444,
+        0 15px 0 #555,
+        0 18px 6px rgba(0, 0, 0, .4),
+        0 0 30px rgba(0, 0, 0, .5),
+        0 3px 15px rgba(0, 0, 0, .6),
+        0 9px 20px rgba(0, 0, 0, .7),
+        0 15px 30px rgba(0, 0, 0, .8),
+        0 30px 50px rgba(0, 0, 0, .9),
+        0 40px 60px rgba(0, 0, 0, 1);
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    border-color: #FFF6E0;
+    outline: none;
+}
+
+.submit-btn {
+    background-color: #333;
+    color: #FFF6E0;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #FFF6E0;
+    color: #272829;
+}

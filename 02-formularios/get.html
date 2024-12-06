@@ -4,43 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formularios GET</title>
+  <link rel="stylesheet" href="estilo_formularios.css">
 </head>
 <body>
-  <form action="controlador.php" method="post">
-    <div>
-      <label for="nombre">Ingrese el nombre</label>
-      <input type="text" name="nombre" id="nombre" placeholder="nombre">
+  <form action="controlador.php" method="post" class="formulario">
+    <div class="formulario__contenedor">
+        <div class="formulario__campo">
+            <label for="nombre" class="formulario__label">Ingrese el nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="nombre" class="formulario__input">
+        </div>
+        <div class="formulario__campo">
+            <label for="apellido" class="formulario__label">Ingrese el apellido</label>
+            <input type="text" name="apellido" id="apellido" placeholder="apellido" class="formulario__input">
+        </div>
+        <div class="formulario__campo">
+            <label for="edad" class="formulario__label">Ingrese la edad</label>
+            <input type="text" name="edad" id="edad" placeholder="edad" class="formulario__input">
+        </div>
+        <div class="formulario__campo">
+            <label for="telefono" class="formulario__label">Ingrese el telefono</label>
+            <input type="text" name="telefono" id="telefono" placeholder="telefono" class="formulario__input">
+        </div>
+
+        <div class="formulario__campo">
+            <label for="html" class="formulario__label">HTML</label>
+            <input type="checkbox" name="checkbox" id="html" value="html" class="formulario__checkbox">
+        </div>
+        <div class="formulario__campo">
+            <label for="css" class="formulario__label">CSS</label>
+            <input type="checkbox" name="checkbox" id="css" value="css" class="formulario__checkbox">
+        </div>
+        <div class="formulario__campo">
+            <label for="js" class="formulario__label">JS</label>
+            <input type="checkbox" name="checkbox" id="js" value="js" class="formulario__checkbox">
+        </div>
+        <div class="formulario__campo">
+            <label for="php" class="formulario__label">PHP</label>
+            <input type="checkbox" name="checkbox" id="php" value="php" class="formulario__checkbox">
+        </div>
+
+        <button type="submit" class="formulario__boton">Enviar</button>
     </div>
-    <div>
-      <label for="apellido">Ingrese el apellido</label>
-      <input type="text" name="apellido" id="apellido" placeholder="apellido">
-    </div>
-    <div>
-      <label for="edad">Ingrese la edad</label>
-      <input type="text" name="edad" id="edad" placeholder="edad">
-    </div>
-    <div>
-      <label for="telefono">Ingrese el telefono</label>
-      <input type="text" name="telefono" id="telefono" placeholder="telefono">
-    </div>
-    <!-- ----------------------------------- -->
-    <div>
-      <label for="html">HTML</label>
-      <input type="checkbox" name="checkbox" id="html" value="html">
-    </div>
-    <div>
-      <label for="css">CSS</label>
-      <input type="checkbox" name="checkbox" id="css" value="css">
-    </div>
-    <div>
-      <label for="js">JS</label>
-      <input type="checkbox" name="checkbox" id="js" value="js">
-    </div>
-    <div>
-      <label for="php">PHP</label>
-      <input type="checkbox" name="checkbox" id="php" value="php">
-    </div>
-    <button type="submit">Enviar</button>
-  </form>
+</form>
+
 </body>
 </html>
